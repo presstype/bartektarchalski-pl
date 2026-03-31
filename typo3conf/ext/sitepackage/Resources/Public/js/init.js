@@ -29,6 +29,9 @@ jQuery(document).ready(function(){
 	jQuery(window).on('load', function(){
 		tokyo_tm_my_load();
 	});
+
+	// Fallback: remove preloader after 3s even if load event doesn't fire
+	setTimeout(function(){ tokyo_tm_my_load(); }, 3000);
 	
 });
 
