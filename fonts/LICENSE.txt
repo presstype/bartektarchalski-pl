@@ -1,0 +1,3 @@
+Fonty Montserrat, Mulish i Poppins (pliki .woff2) sa udostepniane na licencji SIL Open Font License 1.1 (https://openfontlicense.org).
+Copyright: The Montserrat Project Authors; The Mulish Project Authors; Indian Type Foundry (Poppins).
+Pelny tekst licencji: OFL-Montserrat.txt (ta sama licencja dla wszystkich trzech rodzin).

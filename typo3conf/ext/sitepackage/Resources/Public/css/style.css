@@ -2714,3 +2714,146 @@ body.modal{
 		width: 100%
 	}
 }
+
+/* ---------------   BOOKING + COOKIES   ------------------- */
+.booking{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 40px;
+}
+.booking .booking_info{
+	font-size: 15px;
+	max-width: 600px;
+}
+.booking_button,
+.cookie_banner button{
+	display: inline-block;
+	color: #fff;
+	background-color: #000;
+	border: 1px solid #000;
+	padding: 9px 30px 12px;
+	cursor: pointer;
+	font-family: "Montserrat";
+	font-size: 15px;
+	transition: all .3s ease;
+}
+.booking_button:hover,
+.cookie_banner button:hover{
+	background-color: #555;
+	border-color: #555;
+	color: #fff;
+}
+.tokyo_tm_home .details .job a.booking_button{
+	color: #fff;
+	margin-top: 10px;
+}
+.booking_link{
+	margin-left: 20px;
+	color: #000;
+	font-weight: 700;
+}
+.cookie_settings_wrap a{
+	font-size: 13px;
+	color: #777;
+	text-decoration: underline;
+}
+.cookie_banner{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #fff;
+	border-top: 1px solid #DFDFDF;
+	box-shadow: 0 -4px 20px rgba(0,0,0,.08);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+.cookie_banner[hidden]{
+	display: none;
+}
+.cookie_banner p{
+	margin: 0;
+	font-size: 14px;
+	max-width: 760px;
+}
+.cookie_buttons{
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+.cookie_banner button.secondary{
+	color: #000;
+	background-color: #fff;
+}
+.cookie_banner button.secondary:hover{
+	color: #fff;
+	background-color: #555;
+}
+@media (max-width: 768px){
+	.cookie_banner{flex-direction: column; align-items: flex-start; padding: 16px 20px;}
+	.booking_link{margin-left: 0; display: inline-block; margin-top: 10px;}
+}
+.cookie_banner p a{
+	color: #000;
+	font-weight: 700;
+	text-decoration: underline;
+}
+#booking-widget{
+	padding-bottom: 10px;
+}
+#booking-widget iframe{
+	max-width: 100%;
+	background: transparent;
+}
+/* karta widgetu jest wyśrodkowana w iframe (380px) - zawężamy iframe i przesuwamy,
+   żeby jej lewa krawędź była w linii z tekstem */
+@media (min-width: 769px){
+	#booking-widget iframe{
+		width: 440px !important;
+		margin-left: -30px;
+	}
+}
+/* ikona cookies w lewym dolnym rogu - sama ikona, bez tła */
+.cookie_fab{
+	position: fixed;
+	left: 16px;
+	bottom: 16px;
+	z-index: 999;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: 0;
+	box-shadow: none;
+	cursor: pointer;
+	transition: transform .3s ease;
+}
+.cookie_fab:hover,
+.cookie_fab:focus-visible{
+	transform: scale(1.15);
+}
+/* gdy banner jest otwarty, ikona jest zbędna */
+.cookie_banner:not([hidden]) ~ .cookie_fab{
+	display: none;
+}
+.cookie_fab svg{
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+.cookie_fab svg .ck_body{
+	fill: #000;
+	stroke: none;
+}
+.cookie_fab svg .ck_chip{
+	fill: #fff;
+	stroke: none;
+}

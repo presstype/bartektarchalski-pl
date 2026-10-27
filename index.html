@@ -26,9 +26,8 @@
 <script src="typo3temp/assets/js/301d3defed.js"></script>
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />            <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="fonts/fonts.css" media="all">
 <link rel="canonical" href="index.html"/>
 </head>
 <body>
@@ -76,6 +75,10 @@
                         <li class="">
                             <a href="#kontakt" data-scroll-to="#kontakt">Kontakt</a>
                         </li>
+                        
+                        <li class="">
+                            <a href="#kontakt" data-book>Umów wizytę</a>
+                        </li>
                     
                 
             </ul>
@@ -110,6 +113,10 @@
                         
                         <li class="">
                             <a href="#kontakt" data-scroll-to="#kontakt">Kontakt</a>
+                        </li>
+                        
+                        <li class="">
+                            <a href="#kontakt" data-book>Umów wizytę</a>
                         </li>
                     
                 
@@ -154,6 +161,7 @@
 <p>Jestem absolwentem warszawskiej Akademii Sztuk Pięknych. Poza pracą terapeutyczną maluję, rzeźbię, wytwarzam sprzęty. Sztuka, podobnie jak terapia, jest dla mnie przestrzenią, w której coś się szuka, wyraża i przekształca.</p>
 <p>Pracuję stacjonarnie w Warszawie – przy ul. Solec 30A (Dobrostan Psychoterapia) oraz w Instytucie Masculinum przy ul. Kraski 11. Prowadzę także sesje online.</p>
 <p>tel. +48 602 474 720<br> <a href="javascript:linkTo_UnCryptMailto(%27kygjrm8zyprciYnpyamulgyyqyl%2Cnj%27);" target="_blank">bartek@pracowniaasan.pl</a></p>
+<p><a class="booking_button" href="#kontakt" data-book>Umów wizytę</a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -173,19 +181,6 @@
                     
                     <div id="kontakt" class="tokyo_tm_section animated hidden">
                         
-                            <div class="container">
-                                <div class="tokyo_tm_title">
-                                    <div class="title_flex">
-                                        <div class="left">
-                                            
-                                            
-                                                <h3>Kontakt</h3>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
                         <div class="tokyo_tm_textbox w100">
     <div class="container">
         
@@ -193,6 +188,16 @@
         
         
             <p>Numer telefonu: +48 602 47 47 20</p>
+<div id="umow-wizyte" class="booking">
+    <div id="booking-widget" data-profile="https://www.znanylekarz.pl/profil/bartlomiej-tarchalski">
+        <p class="booking_info">Kalendarz wizyt dostarcza serwis ZnanyLekarz (Docplanner), który korzysta z plików cookies. Aby go wyświetlić, potrzebna jest Twoja zgoda.</p>
+        <p>
+            <button type="button" class="booking_button" data-cookie-accept>Zezwalam i pokaż kalendarz</button>
+            <a class="booking_link" href="https://www.znanylekarz.pl/profil/bartlomiej-tarchalski" rel="nofollow noopener" target="_blank">Profil na ZnanyLekarz</a>
+        </p>
+    </div>
+    <p class="cookie_settings_wrap"><a href="#" data-cookie-settings>Ustawienia cookies</a> · <a href="polityka-prywatnosci.html">Polityka prywatności i cookies</a></p>
+</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
         
@@ -218,9 +223,20 @@
 <script src="typo3conf/ext/sitepackage/Resources/Public/js/plugins.js"></script>
 <script src="typo3conf/ext/sitepackage/Resources/Public/js/modernizr.custom.js"></script>
 <script src="typo3conf/ext/sitepackage/Resources/Public/js/init.js"></script>
+<script src="typo3conf/ext/sitepackage/Resources/Public/js/cookies.js"></script>
 <script src="typo3conf/ext/powermail/Resources/Public/JavaScript/Libraries/parsley.min.js"></script>
 <script src="typo3conf/ext/powermail/Resources/Public/JavaScript/Powermail/Form.min.js"></script>
 
 
+<div id="cookie-banner" class="cookie_banner" role="dialog" aria-live="polite" aria-label="Zgoda na cookies" hidden>
+    <p>Ta strona nie używa własnych cookies. Zewnętrzny kalendarz wizyt korzysta z plików cookies i ładuje się dopiero po Twojej zgodzie. Zgodę możesz w każdej chwili zmienić lub wycofać w „Ustawieniach cookies". <a href="polityka-prywatnosci.html">Polityka prywatności i cookies</a>.</p>
+    <div class="cookie_buttons">
+        <button type="button" data-cookie-accept>Akceptuję</button>
+        <button type="button" data-cookie-reject class="secondary">Odrzucam</button>
+    </div>
+</div>
+<button type="button" id="cookie-fab" class="cookie_fab" data-cookie-settings aria-label="Ustawienia cookies" title="Ustawienia cookies">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="ck_body" d="M16 2.500a13.500 13.500 0 1 0 13.500 13.500 5.500 5.500 0 0 1-6.500-6.500 5.500 5.500 0 0 1-7-7Z"/><circle class="ck_chip" cx="11" cy="12" r="2.800"/><circle class="ck_chip" cx="17.500" cy="18.500" r="2.800"/><circle class="ck_chip" cx="10" cy="21.500" r="2.400"/></svg>
+</button>
 </body>
 </html>
